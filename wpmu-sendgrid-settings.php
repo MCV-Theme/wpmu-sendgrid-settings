@@ -3,7 +3,7 @@
 Plugin Name: WPMU SendGrid Settings
 Plugin URI: https://github.com/MCV-Theme/wpmu-sendgrid-settings
 Description: Add global default settings to WordPress Multisite.
-Version: 1.0.0
+Version: 1.0.1
 Author: Jason Jersey
 Author URI: https://twitter.com/degersey
 License: GNU General Public License v2
@@ -30,5 +30,8 @@ function setup_subsite_sendgrid() {
 
     /* replace 'no-reply@example.com' with your sending email */
     update_option("sendgrid_from_email", "no-reply@example.com");
+    
+    update_option("sendgrid_reply_to", "");
+    update_option("sendgrid_categories", "");
 	
 }
